@@ -19,3 +19,5 @@
 *.suo
 
 /tcharall/Release
+
+*.ncb
