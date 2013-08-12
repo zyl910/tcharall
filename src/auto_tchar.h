@@ -30,6 +30,37 @@ Update
 */
 ////////////////////////////////////////////////////////////
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * [zyl910](https://github.com/zyl910/c99int)'s C/C++ librarys.
+ * @{
+ */
+
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * Let all platforms support TCHAR type (让所有平台支持TCHAR类型) .
+ *
+ * @author	[zyl910](mailto:zyl910hero@gmail.com)
+ * @version	1.1
+ * @date	2013-08-16
+ *
+ * Links:
+ *
+ * * Git: https://github.com/zyl910/tcharall
+ * * Blog: http://www.cnblogs.com/zyl910
+ *
+ * tcharall is a lightweight C library. Feature (特性):
+ * * Let all platforms support TCHAR type (让所有平台支持TCHAR类型) . e.g. linux, mac .
+ * * Macros for char types format specifiers (字符类型的格式控制宏). e.g. `PRIsA`, `PRIsW`, `PRIsT` .
+ * * Support `_tmain` (支持 `_tmain` 入口函数).
+ *
+ * @{
+ */
+
+/**
+ * @file	auto_tchar.h
+ * @brief	Let all platforms support TCHAR type (让所有平台支持TCHAR类型) .
+ * @since	@ref GROUP_TCHARALL 1.0
+ */
+
 
 #ifndef __AUTO_TCHAR_H_INCLUDED
 #define __AUTO_TCHAR_H_INCLUDED
@@ -63,7 +94,7 @@ Update
 #ifndef	_TCHAR_H_
 #define _TCHAR_H_
 
-///* All the headers include this file. */
+/* All the headers include this file. */
 //#include <_mingw.h>
 
 /*
@@ -527,3 +558,7 @@ typedef char	_TCHAR;
 #endif // #ifdef __AUTO_TCHAR_H_USESYS
 
 #endif // #ifndef __AUTO_TCHAR_H_INCLUDED
+
+
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC

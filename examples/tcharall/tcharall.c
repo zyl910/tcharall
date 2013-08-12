@@ -20,12 +20,55 @@ Update
 */
 ////////////////////////////////////////////////////////////
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * @{
+ */
+
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * @{
+ */
+
+/** @addtogroup GROUP_TCHARALL_TCHARALL	tcharall_example
+ * Test @ref GROUP_TCHARALL using UTF-8 encoding (测试各种编译器使用tchar（UTF-8编码）).
+ *
+ * @author	[zyl910](mailto:zyl910hero@gmail.com)
+ * @since	@ref GROUP_TCHARALL 1.0
+ * @version	1.1
+ * @date	2013-08-16
+ *
+ * Links:
+ *
+ * * Git: https://github.com/zyl910/tcharall
+ * * Blog: http://www.cnblogs.com/zyl910/tag/tcharall/
+ *
+ *
+ *
+ * ## Change history (变更日志)
+ *
+ * [2013-08-16] v1.1
+ *
+ * * Using @ref GROUP_TCHARALL v1.1 .
+ * * Using Doxygen style comments (使用doxygen规范注释).
+ *
+ * [2013-01-17] V1.0
+ *
+ * * V1.0发布.
+ *
+ * @{
+ */
+
+/**
+ * @file	tcharall.c
+ * @brief	Test @ref GROUP_TCHARALL using UTF-8 encoding (测试各种编译器使用tchar（UTF-8编码）).
+ * @since	@ref GROUP_TCHARALL 1.0
+ */
+
+
 #include <stdio.h>
 #include <locale.h>
 #include <wchar.h>
 
 #include "auto_tchar.h"
-
 #include "prichar.h"
 #include "auto_tmain.h"
 
@@ -75,7 +118,7 @@ char* psa = "A汉字ABC_Welcome_歡迎_ようこそ_환영.";	// 后半段分别
 wchar_t* psw = L"W汉字ABC_Welcome_歡迎_ようこそ_환영.";
 TCHAR* pst = _T("T汉字ABC_Welcome_歡迎_ようこそ_환영.");
 
-
+/// tchar main .
 int _tmain(int argc, TCHAR* argv[])
 {
 	// init.
@@ -94,4 +137,9 @@ int _tmain(int argc, TCHAR* argv[])
 
 	return 0;
 }
+
+
+/** @} */	// @addtogroup GROUP_TCHARALL_TCHARALL
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC
 

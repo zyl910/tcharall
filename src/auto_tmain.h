@@ -30,6 +30,20 @@ Manual
 */
 ////////////////////////////////////////////////////////////
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * @{
+ */
+
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * @{
+ */
+
+/**
+ * @file	auto_tmain.h
+ * @brief	Support `_tmain` (使各种编译器兼容 `_tmain` 入口函数).
+ * @since	@ref GROUP_TCHARALL 1.0
+ */
+
 #ifndef __AUTO_TMAIN_H_INCLUDED
 #define __AUTO_TMAIN_H_INCLUDED
 
@@ -79,3 +93,6 @@ int main(void)
 #endif	// #if defined(__GNUC__) && defined(_UNICODE)
 
 #endif	// #ifndef __AUTO_TMAIN_H_INCLUDED
+
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC

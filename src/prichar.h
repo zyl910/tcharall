@@ -43,6 +43,36 @@ T: TCHAR, TCHAR版.
 */
 ////////////////////////////////////////////////////////////
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * @{
+ */
+
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * @{
+ */
+
+/**
+ * @file	prichar.h
+ * @brief	Macros for char types format specifiers (字符类型的格式控制宏).
+ * @since	@ref GROUP_TCHARALL 1.0
+ *
+ * 为字符类型提供格式控制宏，宏名参考了C99的 `inttypes.h`.
+ *
+ * Prefix (前缀)--
+ * * PRI: print (输出).
+ * * SCN: scan (输入).
+ * 
+ * Infix (中缀)--
+ * * c: char (字符).
+ * * s: string (字符串).
+ * 
+ * Suffix (后缀)--
+ * * A: char (窄字符版).
+ * * W: wchar_t (宽字符版).
+ * * T: TCHAR (TCHAR版).
+ *
+ */
+
 #ifndef __PRICHAR_H_INCLUDED
 #define __PRICHAR_H_INCLUDED
 
@@ -123,3 +153,6 @@ extern "C" {
 #endif
 
 #endif	// #ifndef __PRICHAR_H_INCLUDED
+
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC
