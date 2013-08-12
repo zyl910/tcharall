@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="auto_tmain.h">
+    <ClInclude Include="..\..\src\auto_tmain.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="prichar.h">
+    <ClInclude Include="..\..\src\prichar.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="tchar.h">
+    <ClInclude Include="..\..\src\auto_tchar.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
