@@ -106,14 +106,22 @@ extern "C" {
 	#define PRIsA	"s"
 #endif
 
+/** @def PRIcA
+ * [print format] char .
+ */
+
+/** @def PRIsA
+ * [print format] char string .
+ */
+
 
 ////////////////////////////////////////
 // wchar_t
 ////////////////////////////////////////
 
 // C99标准规定lc/ls总是代表宽字符.
-#define PRIcW	"lc"
-#define PRIsW	"ls"
+#define PRIcW	"lc"	//!< [print format] wchat_t .
+#define PRIsW	"ls"	//!< [print format] wchat_t string .
 
 
 ////////////////////////////////////////
@@ -135,17 +143,25 @@ extern "C" {
 	#endif
 #endif
 
+/** @def PRIcT
+ * [print format] TCHAR .
+ */
+
+/** @def PRIsT
+ * [print format] TCHAR string .
+ */
+
 
 ////////////////////////////////////////
 // SCN
 ////////////////////////////////////////
 
-#define SCNcA	PRIcA
-#define SCNsA	PRIsA
-#define SCNcW	PRIcW
-#define SCNsW	PRIsW
-#define SCNcT	PRIcT
-#define SCNsT	PRIsT
+#define SCNcA	PRIcA	//!< [scan format] char .
+#define SCNsA	PRIsA	//!< [scan format] char string .
+#define SCNcW	PRIcW	//!< [scan format] wchat_t .
+#define SCNsW	PRIsW	//!< [scan format] wchat_t string .
+#define SCNcT	PRIcT	//!< [scan format] TCHAR .
+#define SCNsT	PRIsT	//!< [scan format] TCHAR string .
 
 
 #if defined __cplusplus
