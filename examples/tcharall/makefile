@@ -41,7 +41,7 @@ else
 	endif
 endif
 
-# [args] 扩展参数. make EXFLAGS="-mavx".
+# [args] 扩展参数. make EXFLAGS="-fexec-charset=GB18030".
 CFLAGS += $(EXFLAGS)
 
 
