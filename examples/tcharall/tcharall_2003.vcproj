@@ -19,6 +19,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="..\..\src\"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="TRUE"
 				BasicRuntimeChecks="3"
@@ -66,6 +67,7 @@
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\..\src\"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="4"
 				UsePrecompiledHeader="0"
@@ -121,13 +123,13 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath=".\auto_tmain.h">
+				RelativePath="..\..\src\auto_tchar.h">
 			</File>
 			<File
-				RelativePath=".\prichar.h">
+				RelativePath="..\..\src\auto_tmain.h">
 			</File>
 			<File
-				RelativePath=".\auto_tchar.h">
+				RelativePath="..\..\src\prichar.h">
 			</File>
 		</Filter>
 		<Filter
