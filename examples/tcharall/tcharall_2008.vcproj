@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="..\..\src\"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -114,6 +115,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="..\..\src\"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -181,15 +183,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\auto_tchar.h"
+				RelativePath="..\..\src\auto_tchar.h"
 				>
 			</File>
 			<File
-				RelativePath=".\auto_tmain.h"
+				RelativePath="..\..\src\auto_tmain.h"
 				>
 			</File>
 			<File
-				RelativePath=".\prichar.h"
+				RelativePath="..\..\src\prichar.h"
 				>
 			</File>
 		</Filter>
