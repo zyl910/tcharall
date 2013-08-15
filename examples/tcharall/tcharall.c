@@ -29,7 +29,7 @@ Update
  */
 
 /** @addtogroup GROUP_TCHARALL_TCHARALL	tcharall_example
- * Test @ref GROUP_TCHARALL using UTF-8 encoding (测试各种编译器使用tchar（UTF-8编码）).
+ * Test @ref GROUP_TCHARALL using UTF-8 encoding source file (测试各种编译器使用tchar，源文件使用UTF-8编码).
  *
  * @author	[zyl910](mailto:zyl910hero@gmail.com)
  * @since	@ref GROUP_TCHARALL 1.0

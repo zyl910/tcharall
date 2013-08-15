@@ -36,7 +36,7 @@ Update
  */
 
 /** @addtogroup GROUP_TCHARALL	tcharall
- * Let all platforms support TCHAR type (让所有平台支持TCHAR类型) .
+ * TCHAR on all platforms (让所有平台支持TCHAR类型) .
  *
  * @author	[zyl910](mailto:zyl910hero@gmail.com)
  * @version	1.1
@@ -48,7 +48,7 @@ Update
  * * Blog: http://www.cnblogs.com/zyl910/tag/tcharall/
  *
  * tcharall is a lightweight C library. Feature (特性):
- * * Let all platforms support TCHAR type (让所有平台支持TCHAR类型) . e.g. linux, mac .
+ * * TCHAR on all platforms (让所有平台支持TCHAR类型) . e.g. linux, mac .
  * * Macros for char types format specifiers (字符类型的格式控制宏). e.g. `PRIsA`, `PRIsW`, `PRIsT` .
  * * Support `_tmain` (支持 `_tmain` 入口函数).
  *
@@ -76,7 +76,7 @@ Update
 
 /**
  * @file	auto_tchar.h
- * @brief	Let all platforms support TCHAR type (让所有平台支持TCHAR类型) .
+ * @brief	TCHAR on all platforms (让所有平台支持TCHAR类型) .
  * @since	@ref GROUP_TCHARALL 1.0
  */
 
