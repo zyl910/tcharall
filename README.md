@@ -49,7 +49,7 @@ int _tmain(int argc, TCHAR* argv[])
 }
 ```
 
-![example](../images/examples_tcharall.png "example")
+![example](docs/images/examples_tcharall.png "example")
 
 
 
