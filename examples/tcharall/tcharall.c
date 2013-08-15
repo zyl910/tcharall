@@ -114,9 +114,9 @@ Update
 #endif	// #if defined(__ICL)	// Intel C++
 
 
-char* psa = "A汉字ABC_Welcome_歡迎_ようこそ_환영.";	// 后半段分别包含了 繁体中文、日文、韩文的“欢迎”.
-wchar_t* psw = L"W汉字ABC_Welcome_歡迎_ようこそ_환영.";
-TCHAR* pst = _T("T汉字ABC_Welcome_歡迎_ようこそ_환영.");
+const char* psa = "A_Welcome_歡迎_ようこそ_환영.";	//!< Narrow char string. "Welcome": English, Traditional Chinese, Japanese, Korean.
+const wchar_t* psw = L"W_Welcome_歡迎_ようこそ_환영.";	//!< Wide char string.
+const TCHAR* pst = _T("T_Welcome_歡迎_ようこそ_환영.");	//!< TCHAR string.
 
 /// tchar main .
 int _tmain(int argc, TCHAR* argv[])
@@ -125,14 +125,14 @@ int _tmain(int argc, TCHAR* argv[])
 	setlocale(LC_ALL, "");	// 使用客户环境的缺省locale.
 
 	// title.
-	_tprintf(_T("tcharall v1.00 (%dbit)\n"), (int)(8*sizeof(int*)));
+	_tprintf(_T("tcharall v1.1 (%dbit)\n"), (int)(8*sizeof(int*)));
 	_tprintf(_T("Compiler: %")_T(PRIsA)_T("\n"), COMPILER_NAME);
 	_tprintf(_T("\n"));
 
-	// show
-	_tprintf(_T("%")_T(PRIsA)_T("\n"), psa);	// 输出窄字符串.
-	_tprintf(_T("%")_T(PRIsW)_T("\n"), psw);	// 输出宽字符串.
-	_tprintf(_T("%")_T(PRIsT)_T("\n"), pst);	// 输出TCHAR字符串.
+	// show.
+	_tprintf(_T("%")_T(PRIsA)_T("\n"), psa);	// Print narrow char string.
+	_tprintf(_T("%")_T(PRIsW)_T("\n"), psw);	// Print wide char string.
+	_tprintf(_T("%")_T(PRIsT)_T("\n"), pst);	// Print TCHAR string.
 	
 
 	return 0;

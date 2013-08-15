@@ -17,10 +17,8 @@
 *.app
 
 *.suo
-
-/tcharall/Release
-
 *.ncb
-/docs/html
-
 /examples/tcharall/Debug
+/examples/tcharall/tcharall_2005.vcproj.*.user
+
+/docs/html
