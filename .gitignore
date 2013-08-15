@@ -22,3 +22,5 @@
 
 *.ncb
 /docs/html
+
+/examples/tcharall/Debug

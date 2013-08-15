@@ -45,12 +45,31 @@ Update
  * Links:
  *
  * * Git: https://github.com/zyl910/tcharall
- * * Blog: http://www.cnblogs.com/zyl910
+ * * Blog: http://www.cnblogs.com/zyl910/tag/tcharall/
  *
  * tcharall is a lightweight C library. Feature (特性):
  * * Let all platforms support TCHAR type (让所有平台支持TCHAR类型) . e.g. linux, mac .
  * * Macros for char types format specifiers (字符类型的格式控制宏). e.g. `PRIsA`, `PRIsW`, `PRIsT` .
  * * Support `_tmain` (支持 `_tmain` 入口函数).
+ *
+ *
+ * ## Change history (变更日志)
+ * 
+ * [2013-08-16] v1.1:
+ * 
+ * * Upload the source code to [github](https://github.com/zyl910/tcharall) (将源码上传到github).
+ * * Change the directory structure (调整目录结构).
+ * * Add CMake file (添加CMake编译配置文件).
+ * * Using Doxygen style comments (使用doxygen规范注释).
+ * 
+ * [2013-01-17] v1.0: http://www.cnblogs.com/zyl910/archive/2013/01/17/tcharall.html
+ * 
+ * * Release v1.0 (发布1.0版).
+ * * Rename to auto_tchar.h (为了避免包含目录问题，更名auto_tchar.h（原tchar.h）).
+ * * Fix BCB6 TCHAR undefined bug (修正BCB6的TCHAR问题. tchar.h中没有定义TCHAR，只定义了_TCHAR. TCHAR是在winnt.h中定义的) .
+ * 
+ * [2012-11-08] v0.1
+ * * Complete the v0.1 version (初步完成v0.1版).
  *
  * @{
  */
