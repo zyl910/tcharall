@@ -1,47 +1,22 @@
-////////////////////////////////////////////////////////////
-/*
-prichar.h : 字符串的格式控制字符.
-Author: zyl910
-Blog: http://www.cnblogs.com/zyl910
-URL: http://www.cnblogs.com/zyl910/archive/2013/01/17/tcharall.html
-Version: V1.00
-Updata: 2013-01-17
-
-
-测试过的编译器--
-VC: 6, 2003, 2005, 2008, 2010, 2012.
-BCB: 6.
-GCC: 4.7.1(MinGW-w64), 4.7.0(Fedora 17), 4.6.2(MinGW), llvm-gcc-4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
-
-
-Update
-~~~~~~
-
-[2013-01-17] V1.00
-* V1.0发布.
-
-
-Manual
-~~~~~~
-
-参考了C99的“inttypes.h”，为字符类型设计的格式字符串。
-
-前缀--
-PRI: print, 输出.
-SCN: scan, 输入.
-
-中缀--
-c: char, 字符.
-s: string, 字符串.
-
-后缀--
-A: char, 窄字符版.
-W: wchar_t, 宽字符版.
-T: TCHAR, TCHAR版.
-
-
-*/
-////////////////////////////////////////////////////////////
+//Copyright (c) 2000-2013 zyl910 <zyl910hero@gmail.com>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 
 /** @addtogroup GROUP_ZYLLIBC	zyllibc
  * @{

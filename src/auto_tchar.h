@@ -1,34 +1,22 @@
-////////////////////////////////////////////////////////////
-/*
-auto_tchar.h: 使各种编译器兼容tchar.h .
-Author: zyl910
-Blog: http://www.cnblogs.com/zyl910
-URL: http://www.cnblogs.com/zyl910/archive/2013/01/17/tcharall.html
-Version: V1.00
-Updata: 2013-01-17
-
-
-测试过的编译器--
-VC: 6, 2003, 2005, 2008, 2010, 2012.
-BCB: 6.
-GCC: 4.7.1(MinGW-w64), 4.7.0(Fedora 17), 4.6.2(MinGW), llvm-gcc-4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
-
-
-Update
-~~~~~~
-
-[2013-01-17] V1.00
-* V1.0发布.
-* 为了避免包含目录问题，更名auto_tchar.h（原tchar.h）.
-* 解决BCB6的TCHAR问题（tchar.h中没有定义TCHAR，只定义了_TCHAR。TCHAR是在winnt.h中定义的）.
-
-[2012-11-08] V0.01
-* 初步完成.
-* 参考了 MinGW 的 tchar.h. http://www.mingw.org/
-
-
-*/
-////////////////////////////////////////////////////////////
+//Copyright (c) 2000-2013 zyl910 <zyl910hero@gmail.com>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 
 /** @addtogroup GROUP_ZYLLIBC	zyllibc
  * [zyl910](https://github.com/zyl910/c99int)'s C/C++ librarys.
@@ -47,7 +35,9 @@ Update
  * * Git:	https://github.com/zyl910/tcharall
  * * Blog:	http://www.cnblogs.com/zyl910/tag/tcharall/
  * 
- * tcharall is a lightweight C library. Feature (特性):
+ * tcharall is a lightweight C library.
+ *
+ * Features (特性):
  * * TCHAR on all platforms (让所有平台支持TCHAR类型) . e.g. linux, mac .
  * * Macros for char types format specifiers (字符类型的格式控制宏). e.g. `PRIsA`, `PRIsW`, `PRIsT` .
  * * Support `_tmain` (支持 `_tmain` 入口函数).
