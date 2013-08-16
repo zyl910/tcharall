@@ -101,7 +101,7 @@ THE SOFTWARE.
 
 ## Change history (变更日志)
 
-[2013-08-16] v1.1:
+[2013-08-16] v1.1: http://www.cnblogs.com/zyl910/p/tcharall_v101.html
 
 * Upload the source code to [github](https://github.com/zyl910/tcharall) (将源码上传到github).
 * Change the directory structure (调整目录结构).
