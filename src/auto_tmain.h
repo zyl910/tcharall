@@ -40,8 +40,18 @@ Manual
 
 /**
  * @file	auto_tmain.h
- * @brief	Support `_tmain` (使各种编译器兼容 `_tmain` 入口函数).
+ * @brief	Auto support `_tmain` (使各种编译器兼容 `_tmain` 入口函数).
  * @since	@ref GROUP_TCHARALL 1.0
+ *
+ * Just add one line (只需在主源文件中加上一行):
+ *
+ * 	#include "auto_tmain.h"
+ *
+ *
+ * References (参考了) :
+ *
+ * * https://github.com/coderforlife/mingw-unicode-main/blob/master/mingw-unicode.c
+ *
  */
 
 #ifndef __AUTO_TMAIN_H_INCLUDED

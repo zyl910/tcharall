@@ -42,6 +42,43 @@ Update
  * * Blog: http://www.cnblogs.com/zyl910/tag/tcharall/
  *
  *
+ * ## make command
+ * 
+ * ### On Linux/Mac platforms
+ * 
+ * Make narrow char version executable file (生成窄字符版可执行文件):
+ * 
+ * 	make
+ * 
+ * Remark (备注):
+ * 
+ * * Linux/Mac platforms only support narrow char API (Linux/Mac平台仅支持窄字符版API) .
+ * * On Linux/Mac platforms, "terminal character set" is usually UTF-8 (在Linux/Mac平台上, "终端字符集"一般为UTF-8). And gcc's "default execution character set" is UTF-8 (且gcc的默认"执行字符集"是UTF-8). So no need to modify character set configuration (所以不需修改字符集配置). 
+ * 
+ * 
+ * ### On Windows platform
+ * 
+ * Make narrow char version executable file (生成窄字符版可执行文件):
+ * 
+ * 	make EXFLAGS="-fexec-charset=GB18030"
+ * 
+ * Make wide char version executable file (生成宽字符版可执行文件):
+ * 
+ * 	make EXFLAGS="-fexec-charset=GB18030" UNICODE=1
+ * 
+ * Remark (备注):
+ * 
+ * * Windows platform support narrow char API & wide char API (Windows平台支持窄字符版API与宽字符版API) . You can use UNICODE variable (您可以使用UNICODE变量).
+ * * On Simplified Chinese Windows platform, "terminal character set" is usually GBK (在简体中文Windows平台上, "终端字符集"一般为GBK). So need to use "-fexec-charset" to modify character set configuration (所以需要使用"-fexec-charset"去修改字符集配置). GB18030 is a superset of GBK (GB18030 是 GBK 的超集).
+ *
+ *
+ * ## Tested compiler (测试过的编译器)
+ * 
+ * * Virtual C++: 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
+ * * GCC(Linux): 4.7.0(Fedora 17),  4.7.2(Fedora 18),  4.8.1(Fedora 19).
+ * * GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+ * * LLVM GCC: 4.2(Mac OS X Lion 10.7.4), 4.2.1(Mac OS X Mountain Lion 10.8.3).
+ *
  *
  * ## Change history (变更日志)
  *
@@ -52,7 +89,7 @@ Update
  *
  * [2013-01-17] V1.0
  *
- * * V1.0发布.
+ * * Release v1.0 (发布1.0版).
  *
  * @{
  */
