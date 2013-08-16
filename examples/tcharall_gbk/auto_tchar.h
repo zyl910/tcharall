@@ -44,7 +44,7 @@
  * 
  * ## Usage (用法)
  * 
- * Add `src/*.*` to you project (将 `src/*.*` 加入到您的项目).
+ * Add `src/``*.*` to you project (将 `src/``*.*` 加入到您的项目).
  * 
  * Example code:
  * 
