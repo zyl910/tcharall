@@ -18,7 +18,11 @@
 
 *.suo
 *.ncb
+
+/docs/html
+
 /examples/tcharall/Debug
 /examples/tcharall/tcharall_2005.vcproj.*.user
 
-/docs/html
+/examples/tcharall_gbk/Debug
+/examples/tcharall_gbk/tcharall_gbk_2005.vcproj.*.user

@@ -1,47 +1,52 @@
+.PHONY : all clean
+
 # flags
 CC = gcc
-CFS = -Wall -std=c99 -finput-charset=gbk -fexec-charset=gbk
+CFLAGS += -Wall -std=c99 -finput-charset=gbk -fexec-charset=gbk #-I../../src
+#LDFLAGS += -L../../lib
+#LIBS += -lglib
 
 # args
 RELEASE =0
 UNICODE =0
 BITS =
-CFLAGS =
+EXFLAGS =
 
 # [args] 生成模式. 0代表debug模式, 1代表release模式. make RELEASE=1.
 ifeq ($(RELEASE),0)
 	# debug
-	CFS += -g
+	CFLAGS += -g
 else
 	# release
-	CFS += -static -O3 -DNDEBUG
-	//CFS += -O3 -g -DNDEBUG
+	CFLAGS += -O3 -DNDEBUG
+	//CFLAGS += -O3 -g -DNDEBUG
 endif
 
 # [args] UNICODE模式. 0代表ansi模式, 1代表unicode模式. make UNICODE=1.
 ifeq ($(UNICODE),0)
 	# ansi
-	CFS +=
+	CFLAGS +=
 else
 	# unicode
-	CFS += -D_UNICODE -DUNICODE
+	CFLAGS += -D_UNICODE -DUNICODE
 endif
 
 # [args] 程序位数. 32代表32位程序, 64代表64位程序, 其他默认. make BITS=32.
 ifeq ($(BITS),32)
-	CFS += -m32
+	CFLAGS += -m32
 else
 	ifeq ($(BITS),64)
-		CFS += -m64
+		CFLAGS += -m64
 	else
 	endif
 endif
 
-# [args] 使用 CFLAGS 添加新的参数. make CFLAGS="-mavx".
-CFS += $(CFLAGS)
+# [args] 扩展参数. make EXFLAGS="-fexec-charset=GB18030".
+CFLAGS += $(EXFLAGS)
 
 
-.PHONY : all clean
+# makefile path.
+#vpath %.h ../../src
 
 # files
 TARGETS = tcharall_gbk
@@ -50,12 +55,12 @@ OBJS = tcharall_gbk.o
 all : $(TARGETS)
 
 tcharall_gbk : $(OBJS)
-	$(CC) -o $@ $^ $(CFS)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 
-tcharall_gbk.o : tcharall_gbk.c
-	$(CC) -c $< $(CFS)
+tcharall_gbk.o : tcharall_gbk.c auto_tchar.h auto_tmain.h prichar.h
+	$(CC) -c $< $(CFLAGS)
 
 
 clean :
-	rm -f $(OBJS) $(TARGETS) $(addsuffix .exe,$(TARGETS))
+	$(RM) $(OBJS) $(TARGETS) $(addsuffix .exe,$(TARGETS))

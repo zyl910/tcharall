@@ -1,34 +1,46 @@
-////////////////////////////////////////////////////////////
-/*
-auto_tmain.h : 使各种编译器兼容_tmain .
-Author: zyl910
-Blog: http://www.cnblogs.com/zyl910
-URL: http://www.cnblogs.com/zyl910/archive/2013/01/17/tcharall.html
-Version: V1.00
-Updata: 2013-01-17
+//Copyright (c) 2000-2013 zyl910 <zyl910hero@gmail.com>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * @{
+ */
 
-Update
-~~~~~~
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * @{
+ */
 
-[2013-01-17] V1.00
-* V1.0发布.
-
-
-Manual
-~~~~~~
-
-智能地使_tmain可用.
-只需在主源文件中加上一行——
-#include "auto_tmain.h"
-
-
-兼容 VC、GCC、BCB。
-
-参考了 https://github.com/coderforlife/mingw-unicode-main/blob/master/mingw-unicode.c
-
-*/
-////////////////////////////////////////////////////////////
+/**
+ * @file	auto_tmain.h
+ * @brief	Auto support `_tmain` (使各种编译器兼容 `_tmain` 入口函数).
+ * @since	@ref GROUP_TCHARALL 1.0
+ *
+ * Just add one line (只需在主源文件中加上一行):
+ *
+ * 	#include "auto_tmain.h"
+ *
+ *
+ * References (参考了) :
+ *
+ * * https://github.com/coderforlife/mingw-unicode-main/blob/master/mingw-unicode.c
+ *
+ */
 
 #ifndef __AUTO_TMAIN_H_INCLUDED
 #define __AUTO_TMAIN_H_INCLUDED
@@ -79,3 +91,6 @@ int main(void)
 #endif	// #if defined(__GNUC__) && defined(_UNICODE)
 
 #endif	// #ifndef __AUTO_TMAIN_H_INCLUDED
+
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC

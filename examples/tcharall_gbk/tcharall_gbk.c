@@ -1,24 +1,72 @@
-////////////////////////////////////////////////////////////
-/*
-tcharall.c : 测试各种编译器使用tchar（GBK编码）.
-Author: zyl910
-Blog: http://www.cnblogs.com/zyl910
-URL: http://www.cnblogs.com/zyl910/archive/2013/01/17/tcharall.html
-Version: V1.00
-Updata: 2013-01-17
+//Copyright (c) 2000-2013 zyl910 <zyl910hero@gmail.com>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * @{
+ */
 
-Update
-~~~~~~
+/** @addtogroup GROUP_TCHARALL	tcharall
+ * @{
+ */
 
-[2013-01-17] V1.00
-* V1.0发布.
+/** @addtogroup GROUP_TCHARALL_TCHARALLGBK	tcharall_gbk_example
+ * Test @ref GROUP_TCHARALL using GBK encoding source file (测试各种编译器使用tchar，源文件使用GBK编码).
+ *
+ * @author	[zyl910](mailto:zyl910hero@gmail.com)
+ * @since	@ref GROUP_TCHARALL 1.0
+ * @version	1.1
+ * @date	2013-08-16
+ *
+ * Links:
+ *
+ * * Git: https://github.com/zyl910/tcharall
+ * * Blog: http://www.cnblogs.com/zyl910/tag/tcharall/
+ *
+ *
+ * ## Tested compiler (测试过的编译器)
+ * 
+ * * Virtual C++: 6, 7.1(2003), 8(2005).
+ * * Borland C++ Builder: 6.
+ * * GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+ *
+ *
+ * ## Change history (变更日志)
+ *
+ * [2013-08-16] v1.1
+ *
+ * * Using @ref GROUP_TCHARALL v1.1 .
+ * * Using Doxygen style comments (使用doxygen规范注释).
+ *
+ * [2013-01-17] V1.0
+ *
+ * * Release v1.0 (发布1.0版).
+ *
+ * @{
+ */
 
-[2012-11-08] V0.01
-* 初步完成.
+/**
+ * @file	tcharall_gbk.c
+ * @brief	Test @ref GROUP_TCHARALL using GBK encoding source file (测试各种编译器使用tchar，源文件使用GBK编码).
+ * @since	@ref GROUP_TCHARALL 1.0
+ */
 
-*/
-////////////////////////////////////////////////////////////
 
 #include <stdio.h>
 #include <locale.h>
@@ -26,8 +74,8 @@ Update
 
 #include "auto_tchar.h"
 #include "prichar.h"
-
 #include "auto_tmain.h"
+
 
 
 // Compiler name
@@ -70,26 +118,32 @@ Update
 #endif	// #if defined(__ICL)	// Intel C++
 
 
-char* psa = "A汉字ABC_Welcome_歡迎_ようこそ.";
-wchar_t* psw = L"W汉字ABC_Welcome_歡迎_ようこそ_\uD658\uC601.";	// \uD658\uC601是韩文欢迎.
-TCHAR* pst = _T("T汉字ABC_Welcome_歡迎_ようこそ.");
+const char* psa = "A_Welcome_歡迎_ようこそ.";	//!< Narrow char string. "Welcome": English, Traditional Chinese, Japanese.
+const wchar_t* psw = L"W_Welcome_歡迎_ようこそ_\uD658\uC601.";	//!< Wide char string. "\uD658\uC601" is Korean Welcome.
+const TCHAR* pst = _T("T_Welcome_歡迎_ようこそ.");	//!< TCHAR string.
 
-
+/// tchar main .
 int _tmain(int argc, TCHAR* argv[])
 {
 	// init.
 	setlocale(LC_ALL, "");	// 使用客户环境的缺省locale.
 
-	_tprintf(_T("tcharall_gbk v1.00 (%dbit)\n"), (int)(8*sizeof(int*)));
+	// title.
+	_tprintf(_T("tcharall_gbk v1.1 (%dbit)\n"), (int)(8*sizeof(int*)));
 	_tprintf(_T("Compiler: %")_T(PRIsA)_T("\n"), COMPILER_NAME);
 	_tprintf(_T("\n"));
 
-	// show
-	_tprintf(_T("%")_T(PRIsA)_T("\n"), psa);	// 输出窄字符串.
-	_tprintf(_T("%")_T(PRIsW)_T("\n"), psw);	// 输出宽字符串.
-	_tprintf(_T("%")_T(PRIsT)_T("\n"), pst);	// 输出TCHAR字符串.
+	// show.
+	_tprintf(_T("%")_T(PRIsA)_T("\n"), psa);	// Print narrow char string.
+	_tprintf(_T("%")_T(PRIsW)_T("\n"), psw);	// Print wide char string.
+	_tprintf(_T("%")_T(PRIsT)_T("\n"), pst);	// Print TCHAR string.
 	
 
 	return 0;
 }
+
+
+/** @} */	// @addtogroup GROUP_TCHARALL_TCHARALLGBK
+/** @} */	// @addtogroup GROUP_TCHARALL
+/** @} */	// @addtogroup GROUP_ZYLLIBC
 
